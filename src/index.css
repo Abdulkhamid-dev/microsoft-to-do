@@ -1,13 +1,152 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+:root {
+  --main-bg: #0078d7;
+  --text-color: #a4aeb6;
+  --icon-color: #346fef;
+  --nav-btn: #005a9e;
+  --sidebar-bg: #f4f4f4;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ========== HEADER ========== */
+.container {
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  background-color: var(--main-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+.logo_block {
+  padding-left: 30px !important;
+  background-color: var(--main-bg);
+  height: 100%;
+  display: flex;
+  vertical-align: middle;
+  outline-offset: -1px;
+  padding: 0 12px 0 8px;
+}
+.logo_block a {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+.search_block {
+  cursor: pointer;
+  padding: 8px;
+  width: 100%;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  background-color: #c3ddf7;
+  margin: 8px auto;
+  height: 32px;
+  transition: 0.2s ease-in-out;
+  border-radius: 2px;
+}
+.search_block:hover {
+  background-color: white !important;
+}
+.search_block:focus-within {
+  background-color: white !important;
+}
+
+.search_block input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+.search_block i {
+  width: 20px;
+  color: var(--icon-color);
+}
+.account_block {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 48px;
+}
+.account_block > div {
+  padding: 3px;
+  cursor: pointer;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  transition: 0.2s ease-in-out;
+}
+.account_block > div:hover {
+  background-color: var(--nav-btn);
+}
+.account_block > div > button {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+.user {
+  border: 1px solid white !important;
+  padding: 8px 12px;
+  border-radius: 50%;
+}
+
+/* ========== HEADER ========== */
+/* =========== SIDEBAR ========= */
+
+.left_column {
+  border-right: 1px solid #eaeaea;
+  width: 290px;
+  background-color: var(--sidebar-bg);
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.sidebar_header {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  margin-top: 12px;
+}
+.sidebarNavBtn > button {
+  cursor: pointer;
+  padding: 4px;
+  width: 32px;
+  height: 32px;
+  transition: background-color 0.1s;
+  outline: none;
+  border: none;
+}
+.sidebarNavBtn button:hover {
+  background-color: #fafafa;
+  box-shadow: 0 0 0 1px #ededed;
+}
+.sidebarNavBtn button i {
+  line-height: 2.4rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+}
+.sidebar_content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+  padding-top: 1px;
+}
+
+/* =========== SIDEBAR =========  */
