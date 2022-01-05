@@ -1,9 +1,10 @@
 import React from 'react';
+import TaskItem from '../components/TaskItem'
 
 const Tasks = () => {
     return (
-        <div>
-            <h1>hi</h1>
+        <div className='tasks'>
+            <TaskItem/>
         </div>
     );
 }
