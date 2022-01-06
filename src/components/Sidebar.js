@@ -6,13 +6,18 @@ const Sidebar = () => {
     const toggleInput = () => {
       inputRef.current.focus();
     };
+
+    const menuBtn = useRef();
+    const displayBlock = () => {
+      menuBtn.current.left = -290
+    }
   return (
     <div>
-      <div className="left_column">
+      <div className="left_column" ref={menuBtn}>
         <div className="sidebar">
           <div className="sidebar_header">
             <div className="sidebarNavBtn">
-              <button>
+              <button onClick={displayBlock}>
                 <i class="fas fa-bars"></i>
               </button>
             </div>
@@ -20,7 +25,7 @@ const Sidebar = () => {
           <div className="sidebar_content">
             <nav className="navbar">
               <ul className="navUl">
-               <Link  to="/my-day">
+               <Link  to="/">
                <div>
                   <li className="link_item ">
                     <div>
@@ -65,7 +70,7 @@ const Sidebar = () => {
                   </li>
                 </div>
             </Link>
-             <Link to='/my-day'>
+             <Link to='/'>
              <div>
                   <li className="link_item">
                     <div>
@@ -80,7 +85,7 @@ const Sidebar = () => {
                   </li>
                 </div>
              </Link>
-             <Link to='/my-day'>
+             <Link to='/'>
              <div>
                   <li className="link_item">
                     <div>
